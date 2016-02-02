@@ -1,4 +1,4 @@
-package net.amabb.spring.mvc.sample.configuration;
+package net.amabb.springmvc.configuration;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +21,8 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "net.amabb.spring.mvc.sample.configuration" })
-@PropertySource(value = { "classpath:application.properties" })
+@ComponentScan({"net.amabb.springmvc.configuration"})
+@PropertySource(value = {"classpath:application.properties"})
 public class HibernateConfiguration {
 
     @Autowired
@@ -32,7 +32,7 @@ public class HibernateConfiguration {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] {"net.amabb.spring.mvc.sample.model"});
+        sessionFactory.setPackagesToScan(new String[] {"net.amabb.springmvc.model"});
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
