@@ -11,21 +11,16 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>University Enrollments</title>
+    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
 
-    <style>
-        tr:first-child{
-            font-weight: bold;
-            background-color: #C6C9C4;
-        }
-    </style>
+    <title>University Enrollments</title>
 
 </head>
 
 
 <body>
 <h2>List of Employees</h2>
-<table>
+<table class="table table-striped table-hover">
     <tr>
         <td>NAME</td><td>Joining Date</td><td>Salary</td><td>SSN</td><td></td>
     </tr>
