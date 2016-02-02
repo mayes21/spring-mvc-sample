@@ -22,7 +22,11 @@
 <h2>List of Employees</h2>
 <table class="table table-striped table-hover">
     <tr>
-        <td>NAME</td><td>Joining Date</td><td>Salary</td><td>SSN</td><td></td>
+        <td><i class="glyphicon glyphicon-user"></i> NAME</td>
+        <td>Joining Date</td>
+        <td>Salary</td>
+        <td>SSN</td>
+        <td></td>
     </tr>
     <c:forEach items="${employees}" var="employee">
         <tr>
