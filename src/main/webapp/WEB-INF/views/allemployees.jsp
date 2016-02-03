@@ -11,7 +11,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/bootstrap/bootstrap.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/select2/select2.min.css" />" rel="stylesheet">
+
+
 
     <title>University Enrollments</title>
 
@@ -40,5 +43,24 @@
 </table>
 <br/>
 <a href="<c:url value='/new' />">Add New Employee</a>
+
+<br>
+
+<select class="js-example-basic-single">
+    <c:forEach items="${employees}" var="employee">
+    <option value="${employee.ssn}">${employee.name}</option>
+    </c:forEach>
+</select>
+
+
+<script type="application/javascript" src="<c:url value="/resources/js/lib/jquery-1.12.0.min.js" />" ></script>
+<script type="application/javascript" src="<c:url value="/resources/js/select2/select2.full.min.js" />" ></script>
+
+<script type="application/javascript">
+    $(document).ready(function() {
+        $(".js-example-basic-single").select2();
+    });
+</script>
+
 </body>
 </html>
